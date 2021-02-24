@@ -1,0 +1,29 @@
+spring:
+  application:
+    name: sentinel
+  cloud:
+    sentinel:
+      transport:
+        # 指定控制台
+        dashboard: 10.157.3.197:8849
+        # 服务与控制台交互的http端口 默认8719
+        port: 8719
+        # 指定客户端的ip 在多网卡的情况下这个很重要
+        #client-ip: 10.157.62.152
+    nacos:
+      discovery:
+        server-addr: 10.157.3.197:8848
+        username: nacos
+        password: nacos
+    inetutils:
+      preferred-networks: 10.157
+
+# 使用sentinel 需要设置暴露站点
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
+server:
+  port: 8084

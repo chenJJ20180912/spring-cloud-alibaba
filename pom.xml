@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.example</groupId>
+    <artifactId>spring-cloud-alibaba</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>nacos-discovery-a</module>
+        <module>nacos-discovery-b</module>
+        <module>nacos-discovery-commonapi</module>
+        <module>nacos-configcenter</module>
+        <module>sentinel</module>
+        <module>nacos-theory</module>
+        <module>seata-oracle-account</module>
+        <module>seata-oracle-commonapi</module>
+        <module>seata-oracle-changemoney</module>
+    </modules>
+    <properties>
+        <openfeign.version>2.2.5.RELEASE</openfeign.version>
+    </properties>
+    <parent>
+        <artifactId>spring-cloud-alibaba</artifactId>
+        <groupId>com.alibaba.cloud</groupId>
+        <version>2.2.3.RELEASE</version>
+    </parent>
+    <dependencies>
+        <!-- 设置web支持-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <!-- 依赖feign -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
+            <version>${openfeign.version}</version>
+        </dependency>
+        <!-- 服务发现-->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+        </dependency>
+    </dependencies>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+                <version>2.2.3.RELEASE</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+</project>

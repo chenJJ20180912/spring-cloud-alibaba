@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="nacos-configcenter" />
+        <module name="sentinel" />
+        <module name="seta-a" />
+        <module name="nacos-discovery-a" />
+        <module name="nacos-discovery-b" />
+        <module name="nacos-theory" />
+        <module name="seata-oracle-commonapi" />
+        <module name="seata-oracle-account" />
+        <module name="seata-oracle-b" />
+        <module name="nacos-discovery-commonapi" />
+        <module name="seata-oracle-changemoney" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="discovery-a" target="1.8" />
+      <module name="nacos-discover" target="1.8" />
+      <module name="nacos-discovery" target="1.8" />
+      <module name="seata-oracle-b" target="1.8" />
+      <module name="seta-a" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="discovery-a" options="-parameters" />
+      <module name="nacos-configcenter" options="-parameters" />
+      <module name="nacos-discover" options="-parameters" />
+      <module name="nacos-discovery" options="-parameters" />
+      <module name="nacos-discovery-a" options="-parameters" />
+      <module name="nacos-discovery-b" options="-parameters" />
+      <module name="nacos-discovery-commonapi" options="-parameters" />
+      <module name="nacos-theory" options="-parameters" />
+      <module name="seata-oracle-account" options="-parameters" />
+      <module name="seata-oracle-b" options="-parameters" />
+      <module name="seata-oracle-changemoney" options="-parameters" />
+      <module name="seata-oracle-commonapi" options="-parameters" />
+      <module name="sentinel" options="-parameters" />
+      <module name="seta-a" options="-parameters" />
+    </option>
+  </component>
+</project>
