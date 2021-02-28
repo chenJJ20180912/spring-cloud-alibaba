@@ -1,0 +1,37 @@
+spring:
+  application:
+    name: seata-oracle-hibernate-changeMoney
+  datasource:
+    url: jdbc:oracle:thin:@192.168.174.130:1521/XE
+    username: changemoney
+    password: changemoney
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+      naming:
+        # 取消小驼峰到下划线映射(加上这个)
+        implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+  cloud:
+    alibaba:
+      seata:
+        tx-service-group: seata-oracle-hibernate-group
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+        username: nacos
+        password: nacos
+    inetutils:
+      preferred-networks: 192.168.31
+
+server:
+  port: 8086
+
+feign:
+  client:
+    config:
+      default:
+        connectTimeout: 600000
+        readTimeout: 600000

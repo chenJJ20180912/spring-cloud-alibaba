@@ -9,15 +9,9 @@
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <modules>
-        <module>nacos-discovery-a</module>
-        <module>nacos-discovery-b</module>
-        <module>nacos-discovery-commonapi</module>
-        <module>nacos-configcenter</module>
         <module>sentinel</module>
-        <module>nacos-theory</module>
-        <module>seata-oracle-account</module>
-        <module>seata-oracle-commonapi</module>
-        <module>seata-oracle-changemoney</module>
+        <module>nacos</module>
+        <module>seata</module>
     </modules>
     <properties>
         <openfeign.version>2.2.5.RELEASE</openfeign.version>
@@ -33,16 +27,11 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-        <!-- 依赖feign -->
+        <!-- openfeign-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-openfeign</artifactId>
-            <version>${openfeign.version}</version>
-        </dependency>
-        <!-- 服务发现-->
-        <dependency>
-            <groupId>com.alibaba.cloud</groupId>
-            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+            <version>2.2.5.RELEASE</version>
         </dependency>
     </dependencies>
 

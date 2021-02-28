@@ -1,0 +1,29 @@
+spring:
+  application:
+    name: seata-oracle-account
+  datasource:
+    url: jdbc:oracle:thin:@192.168.174.130:1521/XE
+    username: account
+    password: account
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+  cloud:
+    alibaba:
+      seata:
+        tx-service-group: seata-oracle-mybatis-group
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+        username: nacos
+        password: nacos
+    inetutils:
+      preferred-networks: 192.168.31
+
+server:
+  port: 8085
+
+feign:
+  client:
+    config:
+      default:
+        connectTimeout: 600000
+        readTimeout: 600000
